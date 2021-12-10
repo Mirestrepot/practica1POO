@@ -1,4 +1,4 @@
-public class App {
+public class menu {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
     }
