@@ -27,12 +27,9 @@ public class Cliente implements Serializable {
     // Se agrega el método toString() para mostrar todos los datos de los clientes
     @Override
     public String toString() {
-        return "Cliente : {" +
-                "cedula='" + cedula + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", celular ='" + cel + '\'' +
-                ", gastos =" + gastos +
-                '}';
+        return "Cliente :"+"\nCedula: " + cedula + "\nNombre Completo: "+ nombre + "\nCelular: "+ cel;
+            
+                
     }
 
     // Se agregan lo métodos Getters & Setters
@@ -107,7 +104,7 @@ public class Cliente implements Serializable {
     public static void eliminarCliente(Cliente cliente) {
         clientes.remove(cliente);
     }
-    public static void clienteActual (Cliente cliente) {
-        
+    public static int getNumeroCliente () {
+        return clientes.size();
     }
 }

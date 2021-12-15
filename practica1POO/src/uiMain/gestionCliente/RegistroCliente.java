@@ -21,6 +21,7 @@ public class RegistroCliente {
             int cel = scan.nextInt();
             Cliente.agregarCliente(new Cliente(cedula, nombre, cel));
             System.out.println("Sus datos de han guardado satisfactoriamente");
+            System.out.println("Eres el numero de cliente: "+Cliente.getNumeroCliente());
             System.out.print("1. Regresar : ");
             opcion = scan.nextInt();
         } while (opcion != 1);

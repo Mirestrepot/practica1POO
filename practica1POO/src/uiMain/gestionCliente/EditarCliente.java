@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class EditarCliente {
 
     public static void editarCliente() {
-            
+        int opcion;   
         Scanner scan = new Scanner(System.in);
-
-
         Cliente.getClientes();
-        int opcion = scan.nextInt();
+
+        System.out.println("Ingrese su numero de Cliente: ");
+        int nCliente = scan.nextInt();
         scan.nextLine();
 
 
@@ -25,12 +25,12 @@ public class EditarCliente {
 
             try {
                 switch (opcion) {
-                    case 1: editarCedula(Cliente.getClientes().get(editaCliente-1)); break;
-                    case 2: editarNombre(Cliente.getClientes().get(editaCliente-1)); break;
-                    case 3: editarDireccion(Cliente.getClientes().get(editaCliente-1)); break;
-                    case 4: editarTelefono(Cliente.getClientes().get(editaCliente-1)); break;
-                    case 5: editarGastos(Cliente.getClientes().get(editaCliente-1)); break;
-                    case 6: editarFechaNacimiento(Cliente.getClientes().get(editaCliente-1)); break;
+                    case 1: editarCedula(Cliente.getClientes().get(nCliente)); break;
+                    case 2: break;
+                    case 3: break;
+                    case 4: break;
+                    case 5: break;
+                    case 6: break;
                     case 7: break;
                 }
             } catch (Exception e) {
@@ -45,13 +45,11 @@ public class EditarCliente {
         } while (opcion != 7);
         System.out.print("¡Cliente editado con éxito!, ¿desea editar otro cliente? [si/no] : ");
 
-        public static void  editarCedula (Cliente Cliente){
-            Scanner input = new Scanner(System.in);
-            System.out.println((" 6. Fecha de Nacimiento");
-            String nuevaCedula = input.nextLine();
-            cliente.setCedula(nuevaCedula);
-
-        }
+    public static void  editarCedula (Cliente cliente){
+        Scanner input = new Scanner(System.in);
+        System.out.println (" 6. Fecha de Nacimiento");
+        String nuevaCedula = input.nextLine();
+        Cliente.setCedula(nuevaCedula);
 
     }
 
