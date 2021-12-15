@@ -1,42 +1,40 @@
-package gestionApp.productos;
+package gestionApp.Pedido;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.sound.sampled.Port;
 
-import gestionApp.Pedido.compra;
-
-public class productos implements Serializable {
+public class Producto implements Serializable {
 
     /*
         Escribir y explicar finalidad de la clase Producto, junto con sus estructuras de datos cuando sea necesario.
     */
 
-    private static ArrayList<productos> inventario = new ArrayList<>();
+    private static ArrayList<Producto> inventario = new ArrayList<>();
 
     private int codigo;
     private String nombre;
     private enum tiposProducto {sandwiches,pollo, postres, papas_y_complementos, bebidas, desayunos, mccafe, mccombo};                       // Implementacion caso de enumeración
     tiposProducto tipo;
     private double precio;
-    private ArrayList<compra> productosVendidos = new ArrayList<>();
+    private ArrayList<Compra> productosVendidos = new ArrayList<>();
 
 
-    public productos(int codigo, String nombre, tiposProducto tipo, double precio ) {
+    public Producto(int codigo, String nombre, tiposProducto tipo, double precio ) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.tipo = tipo;
         this.precio = precio;
-        productos.inventario.add(this);
+        Producto.inventario.add(this);
     }
 
-    public static ArrayList<productos> getInventario() {
+    public static ArrayList<Producto> getInventario() {
         return inventario;
     }
 
-    public static void setInventario(ArrayList<productos> inventario) {
-        productos.inventario = inventario;
+    public static void setInventario(ArrayList<Producto> inventario) {
+        Producto.inventario = inventario;
     }
 
     public int getCodigo() {
@@ -71,16 +69,16 @@ public class productos implements Serializable {
         this.precio = precio;
     }
 
-    public ArrayList<compra> getProductosVendidos() {
+    public ArrayList<Compra> getProductosVendidos() {
         return productosVendidos;
     }
 
-    public void setProductosVendidos(ArrayList<compra> productosVendidos) {
+    public void setProductosVendidos(ArrayList<Compra> productosVendidos) {
         this.productosVendidos = productosVendidos;
     }
 
-    public static  ArrayList<productos> agregarProducto(productos producto){
-        productos.inventario.add(producto);
+    public static  ArrayList<Producto> agregarProducto(Producto producto){
+        Producto.inventario.add(producto);
         return inventario;
     }
 }

@@ -1,9 +1,9 @@
-package uiMain.interfazClientes;
+package uiMain.gestionCliente;
 
-import registroFacturacion.pago;
 import java.util.Scanner;
 
-import gestionApp.Pedido.cliente;
+import gestionApp.Pedido.Cliente;
+
 
 
 public class RegistroCliente {
@@ -19,7 +19,7 @@ public class RegistroCliente {
             String nombre = scan.nextLine();
             System.out.print("Celular: ");
             int cel = scan.nextInt();
-            cliente.agregarCliente(new cliente(cedula, nombre, cel));
+            Cliente.agregarCliente(new Cliente(cedula, nombre, cel));
             System.out.println("Sus datos de han guardado satisfactoriamente");
             System.out.print("1. Regresar : ");
             opcion = Integer.parseInt(scan.nextLine());

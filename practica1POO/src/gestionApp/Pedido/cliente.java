@@ -2,10 +2,9 @@ package gestionApp.Pedido;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import gestionApp.Pedido.Compra;
 
-import gestionApp.Pedido.compra;
-
-public class cliente implements Serializable {
+public class Cliente implements Serializable {
 
     /*
         La finalidad de la clase consiste en guardar los datos de los
@@ -15,7 +14,7 @@ public class cliente implements Serializable {
 
     // El Array de clase de clientes de encarga de guardar todas las instancias de
     // Cliente para poder guardar y cargarlas en la serializacion
-    private static ArrayList<cliente> clientes = new ArrayList<>();
+    private static ArrayList<Cliente> clientes = new ArrayList<>();
 
     // Atributos (Encapsulamiento con atributos de visibilidad private)
     private String cedula;
@@ -24,11 +23,11 @@ public class cliente implements Serializable {
     private double gastos;
 
     // Relacion que tiene el cliente con sus compras
-    private ArrayList<compra> compras = new ArrayList<>();
+    private ArrayList<Compra> compras = new ArrayList<>();
 
 
     //Constructor
-    public cliente(String cedula, String nombre, int cel) {
+    public Cliente(String cedula, String nombre, int cel) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.cel = cel;
@@ -47,12 +46,12 @@ public class cliente implements Serializable {
     }
 
     // Se agregan lo métodos Getters & Setters
-    public static ArrayList<cliente> getClientes() {
+    public static ArrayList<Cliente> getClientes() {
         return clientes;
     }
 
-    public static void setClientes(ArrayList<cliente> clientes) {
-        cliente.clientes = clientes;
+    public static void setClientes(ArrayList<Cliente> clientes) {
+        Cliente.clientes = clientes;
     }
 
     public String getCedula() {
@@ -91,11 +90,11 @@ public class cliente implements Serializable {
 
  
 
-    public ArrayList<compra> getCompras() {
+    public ArrayList<Compra> getCompras() {
         return compras;
     }
 
-    public void setCompras(ArrayList<compra> compras) {
+    public void setCompras(ArrayList<Compra> compras) {
         this.compras = compras;
     }
 
@@ -112,12 +111,12 @@ public class cliente implements Serializable {
 
 
 
-    public static void agregarCliente(cliente cliente) {
+    public static void agregarCliente(Cliente cliente) {
         clientes.add(cliente);
     }
 
 
-    public static void eliminarCliente(cliente cliente) {
+    public static void eliminarCliente(Cliente cliente) {
         clientes.remove(cliente);
     }
 

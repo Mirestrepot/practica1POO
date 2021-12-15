@@ -1,8 +1,7 @@
-package uiMain.interfazClientes;
+package uiMain.gestionCliente;
 
 import java.util.Scanner;
-
-import gestionApp.Pedido.cliente;
+import gestionApp.Pedido.Cliente;
 
 public class GestionCliente {
 

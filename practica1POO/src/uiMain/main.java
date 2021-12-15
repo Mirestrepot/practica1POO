@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import baseDatos.deserializador;
 import baseDatos.serializador;
-import uiMain.interfazClientes.GestionCliente;
+import uiMain.gestionCliente.GestionCliente;
 public class main {
     public static void main(String[] args) {
         deserializador.deserializar();

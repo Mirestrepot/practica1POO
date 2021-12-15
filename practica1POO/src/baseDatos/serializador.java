@@ -3,8 +3,8 @@ package baseDatos;
 
 import java.io.*;
 
-import gestionApp.Pedido.cliente;
-import gestionApp.Pedido.compra;
+import gestionApp.Pedido.Cliente;
+import gestionApp.Pedido.Compra;
 import gestionApp.personal.Empleado;
 
 public class serializador {
@@ -21,7 +21,7 @@ public class serializador {
 
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
-            out.writeObject(cliente.getClientes());
+            out.writeObject(Cliente.getClientes());
             out.close();
             fileOut.close();
 
@@ -37,7 +37,7 @@ public class serializador {
 
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
-            out.writeObject(compra.getComprasProducto());
+            out.writeObject(Compra.getComprasProducto());
             out.close();
             fileOut.close();
 

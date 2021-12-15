@@ -1,8 +1,8 @@
 package baseDatos;
 
 
-import gestionApp.Pedido.cliente;
-import gestionApp.Pedido.compra;
+import gestionApp.Pedido.Cliente;
+import gestionApp.Pedido.Compra;
 import gestionApp.personal.Empleado;
 
 import java.io.*;
@@ -22,11 +22,11 @@ public class deserializador {
 
             ObjectInputStream in = new ObjectInputStream(fileIn);
 
-            ArrayList<cliente> clientes;
+            ArrayList<Cliente> clientes;
 
-            clientes = (ArrayList<cliente>) in.readObject();
+            clientes = (ArrayList<Cliente>) in.readObject();
 
-            cliente.setClientes(clientes);
+            Cliente.setClientes(clientes);
 
             in.close();
             fileIn.close();
@@ -46,11 +46,11 @@ public class deserializador {
 
             ObjectInputStream in = new ObjectInputStream(fileIn);
 
-            ArrayList<compra> compras;
+            ArrayList<Compra> compras;
 
-            compras = (ArrayList<compra>) in.readObject();
+            compras = (ArrayList<Compra>) in.readObject();
 
-            compra.setComprasProducto(compras);
+            Compra.setComprasProducto(compras);
 
             in.close();
             fileIn.close();

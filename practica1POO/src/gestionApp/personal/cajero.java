@@ -3,14 +3,14 @@ package gestionApp.personal;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import gestionApp.Pedido.compra;
+import gestionApp.Pedido.Compra;
 import gestionApp.personal.Empleado;
 
 public class Cajero extends Empleado implements Serializable {
 
     private double cantidadEnVentas;
     private static ArrayList<Cajero> cajeros = new ArrayList<Cajero>();
-    private ArrayList<compra> productosVendidos = new ArrayList<compra>();
+    private ArrayList<Compra> productosVendidos = new ArrayList<Compra>();
 
     public Cajero(String nombre, int cedula, double sueldo, int numeroContacto, String correo, double cantidadEnVentas) {
         super(nombre, cedula, sueldo, numeroContacto, correo);
@@ -26,11 +26,11 @@ public class Cajero extends Empleado implements Serializable {
         this.cantidadEnVentas = cantidadEnVentas;
     }
 
-    public ArrayList<compra> getProductosVendidos() {
+    public ArrayList<Compra> getProductosVendidos() {
         return productosVendidos;
     }
 
-    public void setProductosVendidos(ArrayList<compra> productosVendidos) {
+    public void setProductosVendidos(ArrayList<Compra> productosVendidos) {
         this.productosVendidos = productosVendidos;
     }
 

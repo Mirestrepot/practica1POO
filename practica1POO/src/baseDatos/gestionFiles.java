@@ -2,8 +2,9 @@ package baseDatos;
 
 import java.io.*;
 
-import gestionApp.comprasClientes.cliente;
-import gestionApp.comprasClientes.compra;
+import gestionApp.Pedido.Cliente;
+import gestionApp.Pedido.Compra;
+
 
 
 public class gestionFiles {
@@ -55,7 +56,7 @@ public class gestionFiles {
                     fos = new FileOutputStream(file);
                     oos = new ObjectOutputStream(fos);
 
-                    oos.writeObject(cliente.getClientes());
+                    oos.writeObject(Cliente.getClientes());
 
                 } catch (FileNotFoundException e) {
 
@@ -73,7 +74,7 @@ public class gestionFiles {
                     fos = new FileOutputStream(file);
                     oos = new ObjectOutputStream(fos);
 
-                    oos.writeObject(compra.getComprasProducto());
+                    oos.writeObject(Compra.getComprasProducto());
 
                 } catch (FileNotFoundException e) {
 

@@ -3,23 +3,25 @@ package gestionApp.Pedido;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class compra implements Serializable {
+public class Compra implements Serializable {
+
+    
     protected String ID;
     protected  String descripcion;
     protected int precio;
-    private static ArrayList<compra> comprasProducto = new ArrayList<>();
+    private static ArrayList<Compra> comprasProducto = new ArrayList<>();
     private String fechaCompra;
     private float descuento;
-    private ArrayList<compra> productosVendidos = new ArrayList<>();
+    private ArrayList<Compra> productosVendidos = new ArrayList<>();
 
 
-    public compra(String ID, String descripcion, int precio, String fechaCompra, float descuento) {
+    public Compra(String ID, String descripcion, int precio, String fechaCompra, float descuento) {
         this.ID = ID;
         this.descripcion = descripcion;
         this.precio = precio;
         this.fechaCompra = fechaCompra;
         this.descuento = descuento;
-        compra.comprasProducto.add(this);
+        Compra.comprasProducto.add(this);
         
     }
 
@@ -39,12 +41,12 @@ public class compra implements Serializable {
         this.descripcion = desprcicion;
     }
 
-    public static ArrayList<compra> getComprasProducto() {
+    public static ArrayList<Compra> getComprasProducto() {
         return comprasProducto;
     }
 
-    public static void setComprasProducto(ArrayList<compra> comprasProducto) {
-        compra.comprasProducto = comprasProducto;
+    public static void setComprasProducto(ArrayList<Compra> comprasProducto) {
+        Compra.comprasProducto = comprasProducto;
     }
 
     public String getFechaCompra() {
@@ -62,11 +64,11 @@ public class compra implements Serializable {
     public void setDescuento(float descuento) {
         this.descuento = descuento;
     }
-    public  ArrayList<compra> getProductosVendidos() {
+    public  ArrayList<Compra> getProductosVendidos() {
         return productosVendidos;
     }
 
-    public void setProductos(ArrayList<compra> productosVendidos) {
+    public void setProductos(ArrayList<Compra> productosVendidos) {
         this.productosVendidos = productosVendidos;
     }
 
