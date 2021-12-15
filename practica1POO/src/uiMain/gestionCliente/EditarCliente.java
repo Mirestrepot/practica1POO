@@ -19,39 +19,50 @@ public class EditarCliente {
         do {
             System.out.println("\tLos datos ingresados son: ");
             Cliente.getClientes();
-            System.out.println("\t¿Que dato desea Modificar?"+"\n1. Cedula"+"\n2. Nombre Completo"+"\n4. Celular");
+            System.out.println("\t¿Que dato desea Modificar?"+"\n1. Cedula"+"\n2. Nombre Completo"+"\n3. Celular \n4. Regresar");
             
             opcion = scan.nextInt();
 
             try {
                 switch (opcion) {
-                    case 1: editarCedula(Cliente.getClientes().get(nCliente)); break;
-                    case 2: break;
-                    case 3: break;
+                    case 1: 
+                        editarCedula(Cliente.getClientes().get(nCliente-1)); break;
+                    case 2:
+                        editarNombre(Cliente.getClientes().get(nCliente-1)); break;
+                    case 3: 
+                        editarCel(Cliente.getClientes().get(nCliente-1)); break;
                     case 4: break;
-                    case 5: break;
-                    case 6: break;
-                    case 7: break;
+
                 }
             } catch (Exception e) {
-                System.out.print("Indique su eleccion : ");
+                System.out.print("Ingrese una opcion nuevamente: ");
                 opcion = scan.nextInt();
             }
-                
-
-
-            
-
-        } while (opcion != 7);
-        System.out.print("¡Cliente editado con éxito!, ¿desea editar otro cliente? [si/no] : ");
+        } while (opcion != 4);
+    }
 
     public static void  editarCedula (Cliente cliente){
-        Scanner input = new Scanner(System.in);
-        System.out.println (" 6. Fecha de Nacimiento");
-        String nuevaCedula = input.nextLine();
-        Cliente.setCedula(nuevaCedula);
+        Scanner scan = new Scanner(System.in);
+        System.out.println ("Ingrese la Cedula nuevamente");
+        String nuevo = scan.nextLine();
+        cliente.setCedula(nuevo);
+    
+    }
+    public static void  editarNombre (Cliente cliente){
+        Scanner scan = new Scanner(System.in);
+        System.out.println ("Ingrese la Cedula nuevamente");
+        String nuevo = scan.nextLine();
+        cliente.setCedula(nuevo);
 
     }
+    public static void  editarCel (Cliente cliente){
+        Scanner scan = new Scanner(System.in);
+        System.out.println ("Ingrese la Cedula nuevamente");
+        String nuevo = scan.nextLine();
+        cliente.setCedula(nuevo);
+      
+    }
+    
 
 }
     
