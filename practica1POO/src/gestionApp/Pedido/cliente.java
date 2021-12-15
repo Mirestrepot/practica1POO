@@ -16,7 +16,6 @@ public class Cliente implements Serializable {
     // Relacion que tiene el cliente con sus compras
     private ArrayList<Compra> compras = new ArrayList<>();
 
-
     //Constructor
     public Cliente(String cedula, String nombre, int cel) {
         this.cedula = cedula;
@@ -78,8 +77,6 @@ public class Cliente implements Serializable {
     public void setGastos(double gastos) {
         this.gastos = gastos;
     }
-
- 
 
     public ArrayList<Compra> getCompras() {
         return compras;
