@@ -3,29 +3,56 @@ package gestionApp.comprasClientes;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import gestionApp.comprasClientes.compras;
+
 public class cliente implements Serializable {
 
-    private static ArrayList<cliente> clientes = new ArrayList<>();
-    private String cedula;
-    private String nombreCompleto;
-    private String celular;
-    private double gasto;
+    /*
+        La finalidad de la clase consiste en guardar los datos de los
+        clientes, que es de alto interes para el administrador de la
+        tienda.
+    */
 
+    // El Array de clase de clientes de encarga de guardar todas las instancias de
+    // Cliente para poder guardar y cargarlas en la serializacion
+    private static ArrayList<cliente> clientes = new ArrayList<>();
+
+    // Atributos (Encapsulamiento con atributos de visibilidad private)
+    private String cedula;
+    private String nombre;
+    private int cel;
+    private double gastos;
+
+    // Relacion que tiene el cliente con sus compras
     private ArrayList<compras> compras = new ArrayList<>();
 
 
-    public cliente(String cedula, String nombreCompleto, String celular, double gasto) {
+    //Constructor
+    public cliente(String cedula, String nombre, int cel) {
         this.cedula = cedula;
-        this.nombreCompleto = nombreCompleto;
-        cliente.clientes.add(this);
+        this.nombre = nombre;
+        this.cel = cel;
+
     }
 
-    public static ArrayList<cliente> getclientes() {
+    // Se agrega el método toString() para mostrar todos los datos de los clientes
+    @Override
+    public String toString() {
+        return "Cliente : {" +
+                "cedula='" + cedula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", celular ='" + cel + '\'' +
+                ", gastos =" + gastos +
+                '}';
+    }
+
+    // Se agregan lo métodos Getters & Setters
+    public static ArrayList<cliente> getClientes() {
         return clientes;
     }
 
-    public static void setClientes(ArrayList<cliente> Clientes) {
-        cliente.clientes = Clientes;
+    public static void setClientes(ArrayList<cliente> clientes) {
+        cliente.clientes = clientes;
     }
 
     public String getCedula() {
@@ -37,28 +64,32 @@ public class cliente implements Serializable {
     }
 
     public String getNombre() {
-        return nombreCompleto;
+        return nombre;
     }
 
-    public void setNombre(String nombreCompleto) {
-        this.nombreCompleto = nombreCompleto;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getCelular() {
-        return celular;
+  
+
+    public int getCel() {
+        return cel;
     }
 
-    public void setCelular(String celular) {
-        this.celular  = celular;
+    public void setCel(int cel) {
+        this.cel = cel;
     }
 
-    public double getGasto() {
-        return gasto;
+    public double getGastos() {
+        return gastos;
     }
 
-    public void setGasto(double gasto) {
-        this.gasto = gasto;
+    public void setGastos(double gastos) {
+        this.gastos = gastos;
     }
+
+ 
 
     public ArrayList<compras> getCompras() {
         return compras;
@@ -69,13 +100,25 @@ public class cliente implements Serializable {
     }
 
 
-    /*
-        En los siguentes métodos se evidencia sobrecarga de métodos, teneindo en cuenta que en el arreglo de compras
-        del cliente, estas pueden ser de tipo ConpraServicios y CompraProductos
-    */
+    public static String verClientes() {
+        String resultado = "";
 
-    public ArrayList<compras> addCompra(compras compra){
-         this.compras.add(compra);
-         return  this.compras;
+        for (int i = 0; i < clientes.size(); i++) {
+            resultado += (i+1) + ". " + clientes.get(i) + "\n";
+        }
+
+        return resultado;
     }
+
+
+
+    public static void agregarCliente(cliente cliente) {
+        clientes.add(cliente);
+    }
+
+
+    public static void eliminarCliente(cliente cliente) {
+        clientes.remove(cliente);
+    }
+
 }

@@ -1,4 +1,4 @@
-package gestionApp.getionPago;
+package gestionApp.gestionPago;
 
 public class metodoPago {
     

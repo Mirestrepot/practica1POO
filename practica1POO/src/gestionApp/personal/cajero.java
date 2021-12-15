@@ -1,10 +1,10 @@
 package gestionApp.personal;
 
-import gestionApp.comprasClientes.compras;
-import gestionApp.personal.empleados;
-
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import gestionApp.comprasClientes.compras;
+import gestionApp.personal.empleados;
 
 public class cajero extends empleados implements Serializable {
 
