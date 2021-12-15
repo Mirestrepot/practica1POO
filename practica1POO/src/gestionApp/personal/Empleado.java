@@ -1,8 +1,9 @@
 package gestionApp.personal;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public abstract class empleados implements Serializable {
+public abstract class Empleado implements Serializable {
 
     private String nombre;
     private int cedula;
@@ -10,9 +11,9 @@ public abstract class empleados implements Serializable {
     private double comision;
     private int numeroContacto;
     private String correo;
-    
+    private static ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 
-    public empleados(String nombre, int cedula, double sueldo, int numeroContacto, String correo) {
+    public Empleado(String nombre, int cedula, double sueldo, int numeroContacto, String correo) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.sueldo = sueldo;
@@ -69,5 +70,14 @@ public abstract class empleados implements Serializable {
     }
 
     public abstract double calcularComision();
+
+    public static ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public static void setEmpleados(ArrayList<Empleado> empleados) {
+        Empleado.empleados = empleados;
+    }
+
 
 }

@@ -2,49 +2,37 @@ package uiMain;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import gestionApp.comprasClientes.cliente;
-import uiMain.interfazClientes.RegistroCliente;
-import uiMain.interfazClientes.gestionClientes;
+import baseDatos.deserializador;
+import baseDatos.serializador;
+import uiMain.interfazClientes.GestionCliente;
 public class main {
-    public  main(String[] args) throws Exception {
-        boolean salir = false;
+    public static void main(String[] args) {
+        deserializador.deserializar();
+        Scanner input = new Scanner(System.in);
         int opcion;
-        Scanner scan = new Scanner(System.in);
-        while (!salir) {
+
+        do {
             System.out.println("\t MENU PRINCIPAL"+"\n1. Realizar un pedido"+"\n2. Opcion 2"+"\n3. Opcion 3"+"\n4. Salir");
-
-            try {
-                
-                System.out.println("Escribe una de las opciones");
-                opcion = scan.nextInt();
-    
-                switch (opcion) {
-                    case 1:
-                        gestionClientes.GestionarCliente();
-                        
-
-                        break;
-                    case 2:
-                        System.out.println("Has seleccionado la opcion 2");
-                        break;
-                    case 3:
-                        System.out.println("Has seleccionado la opcion 3");
-                        break;
-                    case 4:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println("Solo números entre 1 y 4");
-                }
-            }catch (InputMismatchException e) {
-                System.out.println("Debes insertar un número");
-                scan.next();
+            opcion = input.nextInt();
+            switch (opcion) {
+                case 1: GestionCliente.GestionarCliente();
+                case 2: break;
+                case 3: break;
+                case 4: break;
+                case 5: break;
+                case 6: break;
+                case 7: salirDelSistema(); break;
             }
-        }
-        
-        }
+
+        } while (opcion != 7);
+    }
+    public static void salirDelSistema() {
+        serializador.serializar();
+    }
+
+}
      
 		
-    }
+    
 
 

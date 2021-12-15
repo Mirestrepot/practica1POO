@@ -3,19 +3,19 @@ package gestionApp.personal;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import gestionApp.comprasClientes.compras;
-import gestionApp.personal.empleados;
+import gestionApp.Pedido.compra;
+import gestionApp.personal.Empleado;
 
-public class cajero extends empleados implements Serializable {
+public class Cajero extends Empleado implements Serializable {
 
     private double cantidadEnVentas;
-    private static ArrayList<cajero> cajeros = new ArrayList<cajero>();
-    private ArrayList<compras> productosVendidos = new ArrayList<compras>();
+    private static ArrayList<Cajero> cajeros = new ArrayList<Cajero>();
+    private ArrayList<compra> productosVendidos = new ArrayList<compra>();
 
-    public cajero(String nombre, int cedula, double sueldo, int numeroContacto, String correo, double cantidadEnVentas) {
+    public Cajero(String nombre, int cedula, double sueldo, int numeroContacto, String correo, double cantidadEnVentas) {
         super(nombre, cedula, sueldo, numeroContacto, correo);
         this.cantidadEnVentas = cantidadEnVentas;
-        cajero.cajeros.add(this);
+        Cajero.cajeros.add(this);
     }
 
     public double getCantidadEnVentas() {
@@ -26,20 +26,20 @@ public class cajero extends empleados implements Serializable {
         this.cantidadEnVentas = cantidadEnVentas;
     }
 
-    public ArrayList<compras> getProductosVendidos() {
+    public ArrayList<compra> getProductosVendidos() {
         return productosVendidos;
     }
 
-    public void setProductosVendidos(ArrayList<compras> productosVendidos) {
+    public void setProductosVendidos(ArrayList<compra> productosVendidos) {
         this.productosVendidos = productosVendidos;
     }
 
-    public static ArrayList<cajero> getCajeros() {
+    public static ArrayList<Cajero> getCajeros() {
         return cajeros;
     }
 
-    public static void setCajeros(ArrayList<cajero> cajeros) {
-        cajero.cajeros = cajeros;
+    public static void setCajeros(ArrayList<Cajero> cajeros) {
+        Cajero.cajeros = cajeros;
     }
 
     @Override

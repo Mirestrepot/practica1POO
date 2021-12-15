@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import javax.sound.sampled.Port;
 
-import gestionApp.comprasClientes.compras;
+import gestionApp.Pedido.compra;
 
 public class productos implements Serializable {
 
@@ -20,7 +20,7 @@ public class productos implements Serializable {
     private enum tiposProducto {sandwiches,pollo, postres, papas_y_complementos, bebidas, desayunos, mccafe, mccombo};                       // Implementacion caso de enumeración
     tiposProducto tipo;
     private double precio;
-    private ArrayList<compras> productosVendidos = new ArrayList<>();
+    private ArrayList<compra> productosVendidos = new ArrayList<>();
 
 
     public productos(int codigo, String nombre, tiposProducto tipo, double precio ) {
@@ -71,11 +71,11 @@ public class productos implements Serializable {
         this.precio = precio;
     }
 
-    public ArrayList<compras> getProductosVendidos() {
+    public ArrayList<compra> getProductosVendidos() {
         return productosVendidos;
     }
 
-    public void setProductosVendidos(ArrayList<compras> productosVendidos) {
+    public void setProductosVendidos(ArrayList<compra> productosVendidos) {
         this.productosVendidos = productosVendidos;
     }
 

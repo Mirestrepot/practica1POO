@@ -1,42 +1,29 @@
 package uiMain.interfazClientes;
 
-import gestionApp.comprasClientes.cliente;
 import registroFacturacion.pago;
 import java.util.Scanner;
 
+import gestionApp.Pedido.cliente;
+
 
 public class RegistroCliente {
-
-    /*
-        Se crea el método registrarCliente() cuya funcionalidad pedirle al usuario por consola
-        que digite todos los atributos del cliente, los cuáles se usarán para crear el objeto
-        de tipo cliente mediante el uso del método constructor de la clase Cliente, el método además
-        le permite al usuario crear múltiples clientes ingresando la opción "si", una vez el usuario
-        ingrese la opción "no", entonces el método acabará y el programa seguirá su ejecución.
-    */
-
     public static void registrarCliente() {
-
-        Scanner input = new Scanner(System.in);
-
         int opcion;
+        Scanner scan = new Scanner(System.in);
 
         do {
-            System.out.print("Cedula: ");
-            String cedula = input.nextLine();
-            System.out.print("Nombre: ");
-            String nombre = input.nextLine();
+            System.out.print("\tIngrese porfavor los siguiente campos ");
+            System.out.print("\nCedula: ");
+            String cedula = scan.nextLine();
+            System.out.print("Nombre Completo: ");
+            String nombre = scan.nextLine();
             System.out.print("Celular: ");
-            int cel = input.nextInt();
-
-
+            int cel = scan.nextInt();
             cliente.agregarCliente(new cliente(cedula, nombre, cel));
-
-            System.out.println("¡Cliente creado con éxito!");
-            System.out.print(" 1. Regresar : ");
-            opcion = Integer.parseInt(input.nextLine());
-
-        } while(opcion != 1);
+            System.out.println("Sus datos de han guardado satisfactoriamente");
+            System.out.print("1. Regresar : ");
+            opcion = Integer.parseInt(scan.nextLine());
+        } while (opcion != 1);
 
     }
 

@@ -1,9 +1,9 @@
-package gestionApp.comprasClientes;
+package gestionApp.Pedido;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import gestionApp.comprasClientes.compras;
+import gestionApp.Pedido.compra;
 
 public class cliente implements Serializable {
 
@@ -24,7 +24,7 @@ public class cliente implements Serializable {
     private double gastos;
 
     // Relacion que tiene el cliente con sus compras
-    private ArrayList<compras> compras = new ArrayList<>();
+    private ArrayList<compra> compras = new ArrayList<>();
 
 
     //Constructor
@@ -91,11 +91,11 @@ public class cliente implements Serializable {
 
  
 
-    public ArrayList<compras> getCompras() {
+    public ArrayList<compra> getCompras() {
         return compras;
     }
 
-    public void setCompras(ArrayList<compras> compras) {
+    public void setCompras(ArrayList<compra> compras) {
         this.compras = compras;
     }
 

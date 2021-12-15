@@ -1,5 +1,5 @@
 package gestionApp.personal;
 
-public class cocineros {
+public class Cocinero {
     
 }

@@ -3,7 +3,7 @@ package baseDatos;
 import java.io.*;
 
 import gestionApp.comprasClientes.cliente;
-import gestionApp.comprasClientes.compras;
+import gestionApp.comprasClientes.compra;
 
 
 public class gestionFiles {
@@ -73,7 +73,7 @@ public class gestionFiles {
                     fos = new FileOutputStream(file);
                     oos = new ObjectOutputStream(fos);
 
-                    oos.writeObject(compras.getComprasProducto());
+                    oos.writeObject(compra.getComprasProducto());
 
                 } catch (FileNotFoundException e) {
 
