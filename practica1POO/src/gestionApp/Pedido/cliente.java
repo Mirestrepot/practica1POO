@@ -107,5 +107,7 @@ public class Cliente implements Serializable {
     public static void eliminarCliente(Cliente cliente) {
         clientes.remove(cliente);
     }
-
+    public static void clienteActual (Cliente cliente) {
+        
+    }
 }

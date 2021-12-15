@@ -1,10 +1,7 @@
 package uiMain;
 
 import java.util.Scanner;
-
 import uiMain.gestionCliente.GestionCliente;
-
-
 
 public class main {
     public static void main(String[] args) {
