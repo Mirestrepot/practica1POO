@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import baseDatos.deserializador;
-import baseDatos.serializador;
+
 import uiMain.gestionCliente.GestionCliente;
 public class main {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class main {
         } while (opcion != 7);
     }
     public static void salirDelSistema() {
-        serializador.serializar();
+
     }
 
 }
