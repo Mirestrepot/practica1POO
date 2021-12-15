@@ -2,21 +2,12 @@ package gestionApp.Pedido;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import gestionApp.Pedido.Compra;
+
 
 public class Cliente implements Serializable {
 
-    /*
-        La finalidad de la clase consiste en guardar los datos de los
-        clientes, que es de alto interes para el administrador de la
-        tienda.
-    */
-
-    // El Array de clase de clientes de encarga de guardar todas las instancias de
-    // Cliente para poder guardar y cargarlas en la serializacion
     private static ArrayList<Cliente> clientes = new ArrayList<>();
 
-    // Atributos (Encapsulamiento con atributos de visibilidad private)
     private String cedula;
     private String nombre;
     private int cel;

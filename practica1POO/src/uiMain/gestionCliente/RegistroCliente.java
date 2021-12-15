@@ -22,7 +22,7 @@ public class RegistroCliente {
             Cliente.agregarCliente(new Cliente(cedula, nombre, cel));
             System.out.println("Sus datos de han guardado satisfactoriamente");
             System.out.print("1. Regresar : ");
-            opcion = Integer.parseInt(scan.nextLine());
+            opcion = scan.nextInt();
         } while (opcion != 1);
 
     }
