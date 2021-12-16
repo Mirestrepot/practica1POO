@@ -2,15 +2,22 @@ package uiMain;
 
 import java.util.Scanner;
 import uiMain.gestionCliente.GestionCliente;
-import uiMain.gestionCliente.RegistroCliente;
 
 public class main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+        int opcion = scan.nextInt();
 
         do {
-            
+            try {
+                System.out.print("\t MENU PRINCIPAL");
+                System.out.print("\t Para realizar un pedido... 1. Para continuar o 2. Para salir ");
+                try {
+                    
+                } catch (Exception e) {
+                    System.out.print("Ingrese una opcion nuevamente: ");
+                    opcion = scan.nextInt();
+                }
                 switch (opcion) {
                     case 1: 
                         GestionCliente.GestionarCliente(); break;
