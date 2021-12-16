@@ -6,12 +6,13 @@ import uiMain.gestionCliente.GestionCliente;
 public class main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int opcion = scan.nextInt();
+        int opcion;
 
         do {
             try {
                 System.out.print("\t MENU PRINCIPAL");
                 System.out.print("\t Para realizar un pedido... 1. Para continuar o 2. Para salir ");
+                opcion = scan.nextInt();
                 try {
                     
                 } catch (Exception e) {
