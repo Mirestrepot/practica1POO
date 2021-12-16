@@ -14,13 +14,13 @@ public class main {
                 System.out.print("\t Para realizar un pedido... 1. Para continuar o 2. Para salir ");
                 opcion = scan.nextInt();
                 try {
-                    
+
                 } catch (Exception e) {
                     System.out.print("Ingrese una opcion nuevamente: ");
                     opcion = scan.nextInt();
                 }
                 switch (opcion) {
-                    case 1: 
+                    case 1:
                         GestionCliente.GestionarCliente(); break;
                     case 2: break;
                     case 3: break;
@@ -38,8 +38,3 @@ public class main {
     }
 
 }
-     
-		
-    
-
-
